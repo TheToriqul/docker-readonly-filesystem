@@ -20,11 +20,11 @@ docker build -t readonly-test .
 # Run container with read-only filesystem
 docker run --rm -it --read-only readonly-test
 
-# Run with temporary storage
+# Run with temporary storage (Optional)
 docker run --rm -it --read-only --tmpfs /tmp readonly-test
 ```
 
-### Advanced Container Operations
+### Advanced Container Operations (Optional)
 ```bash
 # Run with specific mount points
 docker run --rm -it \
@@ -54,7 +54,7 @@ docker inspect container_name | grep ReadonlyRootfs
 docker inspect container_name | grep -A 10 Volumes
 ```
 
-### Storage Operations
+### Storage Operations (Optional)
 ```bash
 # Create a named volume
 docker volume create data-volume
@@ -66,7 +66,7 @@ docker volume inspect data-volume
 docker volume rm data-volume
 ```
 
-## Section 3: Security Verification
+## Section 3: Security Verification (Optional)
 
 ### Security Checks
 ```bash
